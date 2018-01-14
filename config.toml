@@ -1,0 +1,7 @@
+baseURL = "http://example.org/"
+languageCode = "zh-cn"
+title = "Alr2d2's Psycho"
+theme="cactus-plus"
+author="Alr2d2"
+[params]
+    customCSS = ["css/override.css", "css/atom-one-light.css"]
