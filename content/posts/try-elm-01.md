@@ -1,7 +1,6 @@
 ---
-title: "Elm 介绍（一）"
-date: 2018-01-16T23:51:30+08:00
-draft: true
+title: "Try Elm"
+date: 2018-01-18T23:23:30+08:00
 ---
 
 [Elm](https://elm-lang.org) 是一门编译到 JavaScript 的函数式语言，官方文档表示语言没有运行时错误，作为可以在 Web 上运行的语言，没有运行时错误大大减少了 debug 的难度，经常写 JavaScript 的话应该对运行时错误很头疼。
@@ -25,6 +24,12 @@ draft: true
 
 ![超时图片](/images/timeout.png)
 
-作为一个函数式语言，并且使用 Haskell 来写，其语法也与 Haskell 有点相似，比如函数的调用不用括号来包含参数，而是使用空格，这种选择与 [Curring](https://en.wikipedia.org/wiki/Currying) 和 [Partial Application](https://en.wikipedia.org/wiki/Partial_application) 的概念相关，算是可以更好的表示出这两种语义的语法了，并不是一个奇怪的选择。
+作为一个函数式语言，并且使用了 Haskell 来实现，其语法也与 Haskell 有点相似，比如函数的调用不用括号来包含参数，而是使用空格
 
-并且需要注意的是。Elm 有所谓的 syntactically significant whitespace，即缩进也是语法的一部分，这个跟 Python 类似，所以在赋值语句等情况下，空格是必须的。
+```elm
+String.length "hello"
+```
+
+这种选择与 [Curring](https://en.wikipedia.org/wiki/Currying) 和 [Partial Application](https://en.wikipedia.org/wiki/Partial_application) 的概念相关，算是可以更好的表示出这两种语义的语法了，并不是一个奇怪的选择。
+
+并且需要注意的是。Elm 有所谓的 syntactically significant whitespace，即缩进也是语法的一部分，这个跟 Python 类似，所以在赋值语句等情况下，空格是必须的。关于语言的一些基本特性最好是查看[官方文档](http://elm-lang.org/docs)，使用中也可以查阅 [Core Libraries 文档](http://package.elm-lang.org/packages/elm-lang/core/latest/)。
