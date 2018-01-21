@@ -1,8 +1,10 @@
 baseURL = "https://alr2d2.io/"
 languageCode = "zh-cn"
 title = "Alr2d2's Psycho"
-theme="cactus-plus"
-author="Alr2d2"
+theme = "cactus-plus"
+author = "Alr2d2"
 ignoreFiles = [ "\\.#" ]
+googleAnalytics = "UA-112759972-1"
 [params]
     customCSS = ["css/override.css", "css/atom-one-light.css"]
+    enableGoogleAnalytics = true
