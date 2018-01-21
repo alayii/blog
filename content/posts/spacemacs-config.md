@@ -1,7 +1,6 @@
 ---
 title: "Spacemacs 简单配置"
-date: 2018-01-21T15:36:02+08:00
-draft: true
+date: 2018-01-21T17:43:02+08:00
 ---
 
 一直在找一个开箱即用，键位与 vim 相同，但也不缺少可扩展性的编辑器，为什么不直接使用 vim 呢，原因是没有花时间把配置折腾好，而且有时候在家写前端代码较少，想看看其他语言，这样配置出来的东西也没法在工作的时候使用。
@@ -40,13 +39,13 @@ alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
 自动显示目录结构：
 
-```elisp
+```
 (add-hook 'after-init-hook #'neotree-toggle)
 ```
 
 终端配置：
 
-```elisp
+```
 (shell :vairables
         shell-default-shell 'term
         shell-default-term-shell "bin/bash"
@@ -96,5 +95,40 @@ SPC p p
 SPC p f
 ```
 
+还有个痛点是在终端内，没法复制内容到系统剪贴板，也不从系统剪贴板粘贴，这个功能在 GUI 模式下是正常的。参考 github 上的 (issue)[https://github.com/syl20bnr/spacemacs/issues/2222]，我们可以在 .spacemacs 的 user-config 内加上两段代码，即可在终端内也实现此功能。
+
+```
+(defun copy-to-clipboard ()
+      "Copies selection to x-clipboard."
+      (interactive)
+      (if (display-graphic-p)
+          (progn
+            (message "Yanked region to x-clipboard!")
+            (call-interactively 'clipboard-kill-ring-save)
+            )
+        (if (region-active-p)
+            (progn
+              (shell-command-on-region (region-beginning) (region-end) "pbpaste")
+              (message "Yanked region to clipboard!")
+              (deactivate-mark))
+          (message "No region active; can't yank to clipboard!")))
+      )
+
+    (defun paste-from-clipboard ()
+      "Pastes from x-clipboard."
+      (interactive)
+      (if (display-graphic-p)
+          (progn
+            (clipboard-yank)
+            (message "graphics active")
+            )
+        (insert (shell-command-to-string "pbpaste"))
+        )
+      )
+  (evil-leader/set-key "o y" 'copy-to-clipboard)
+  (evil-leader/set-key "o p" 'paste-from-clipboard)
+```
+
+这样复制到剪贴版则用 `SPC o y`，粘贴用 `SPC o p`。到此，我们对一个编辑器需要的基本功能是完善了，其他自动补全这些代码上的事情，还没有试过，想必应该不需要太多配置既可使用了。
 
 PS: 如果 spacemacs 在下载 package 的时候一直不成功，或者出现 Bad Request ，可以尝试用 emcas --insecure -nw 打开，不知道为什么 Let's Encrypt 的证书被不信任了。
