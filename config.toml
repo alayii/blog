@@ -3,5 +3,6 @@ languageCode = "zh-cn"
 title = "Alr2d2's Psycho"
 theme="cactus-plus"
 author="Alr2d2"
+ignoreFiles = [ "\\.#" ]
 [params]
     customCSS = ["css/override.css", "css/atom-one-light.css"]
