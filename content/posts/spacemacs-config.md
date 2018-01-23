@@ -131,4 +131,6 @@ SPC p f
 
 这样复制到剪贴版则用 `SPC o y`，粘贴用 `SPC o p`。到此，我们对一个编辑器需要的基本功能是完善了，其他自动补全这些代码上的事情，还没有试过，想必应该不需要太多配置既可使用了。
 
+附上完整的配置文件：[https://gist.github.com/alayii/688de9003879b1dd6d90883cd238c682](https://gist.github.com/alayii/688de9003879b1dd6d90883cd238c682)
+
 PS: 如果 spacemacs 在下载 package 的时候一直不成功，或者出现 Bad Request ，可以尝试用 emcas --insecure -nw 打开，不知道为什么 Let's Encrypt 的证书被不信任了。
