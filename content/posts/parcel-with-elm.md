@@ -26,7 +26,7 @@ npm install parcel-plugin-elm
 <body>
     <div id="main">
     </div>
-  <script src="./index.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
 ```
