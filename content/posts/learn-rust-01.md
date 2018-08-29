@@ -1,5 +1,5 @@
 ---
-title: "Learning Rust - Part 01"
+title: "解释 Rust 的 Ownership"
 date: 2018-03-19T13:06:10+08:00
 ---
 
