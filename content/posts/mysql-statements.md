@@ -1,5 +1,5 @@
 ---
-title: "MySQL 基础语句汇总"
+title: "MySQL 基础语句汇总(update 09-02)"
 date: 2018-08-29T23:17:29+08:00
 ---
 
