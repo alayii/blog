@@ -21,3 +21,17 @@ code {
     background-color: rgba(27,31,35,0.05);
     border-radius: 3px;
 }
+
+.home {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0px 40px 20px 40px;
+}
+
+#post-list .dates {
+    color: #757575;
+}
+
+p.small {
+    color: #757575;
+}
