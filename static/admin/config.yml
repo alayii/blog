@@ -3,9 +3,6 @@ backend:
   branch: master
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
-slug:
-  encoding: "ascii"
-  clean_accents: true
 collections:
   - name: "blog"
     label: "Alr2d2 Blog"
