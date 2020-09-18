@@ -1,8 +1,8 @@
-baseURL = "https://alr2d2.io/"
+baseURL = "https://al002.dev/"
 languageCode = "zh-cn"
-title = "Alr2d2's Psycho"
+title = "al002's Psycho"
 theme = "cactus-plus"
-author = "Alr2d2"
+author = "al002"
 ignoreFiles = [ "\\.#" ]
 googleAnalytics = "UA-112759972-1"
 [params]
