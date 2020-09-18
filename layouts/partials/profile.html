@@ -1,7 +1,7 @@
 <div class="profile">
     <section id="wrapper">
         <header id="header">
-            <img alt="avatar" id="avatar" class="2x" src="{{ .Site.BaseURL }}images/avatar.png"/>
+            <img alt="avatar" id="avatar" src="{{ .Site.BaseURL }}images/avatar.png"/>
             <h1>{{ .Site.Title }}</h1>
             {{ with .Site.Params.bio }}<h2>{{ . | markdownify }}</h2>{{ end }}
         </header>
